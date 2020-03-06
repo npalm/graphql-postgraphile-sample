@@ -1,0 +1,14 @@
+{
+  "name": "postgraphile",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "start": "npx postgraphile --append-plugins @graphile-contrib/pg-many-to-many --connection postgres://postgres:secret@localhost:5432/postgres --dynamic-json"
+  },
+  "devDependencies": {
+    "@graphile-contrib/pg-many-to-many": "^1.0.0-beta.13",
+    "npx": "^10.2.2",
+    "postgraphile": "^4.5.5"
+  }
+}
