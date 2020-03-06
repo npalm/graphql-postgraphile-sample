@@ -15,8 +15,7 @@ services:
       retries: 5
 
   java-service:
-    image: npalm/graphql-java-demo:rest-service
-    image: test
+    image: npalm/graphql-java-demo
     restart: always
     environment:
       SPRING_PROFILES_ACTIVE: postgres
@@ -29,5 +28,7 @@ services:
         "wait-for-it.sh",
         "db:5432",
         "--",
-        "java", "-jar" , "/app/graphql-demo-service.jar",
+        "java",
+        "-jar",
+        "/app/graphql-demo-service.jar",
       ]
